@@ -22,6 +22,9 @@
       ripgrep
       neofetch
       starship
+
+      # Applications
+      obsidian
     ];
 
     stateVersion = "23.11";

@@ -16,7 +16,16 @@
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            # Required to install obsidian
+            "electron-25.9.0"
+          ];
+        };
+      };
     in {
       nixosConfigurations.default = lib.nixosSystem {
 	        inherit system;
