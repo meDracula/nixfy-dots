@@ -125,6 +125,9 @@
     gnupg
     pinentry
     pinentry-curses
+
+    # VPN
+    openvpn
   ];
 
   #######
