@@ -25,6 +25,11 @@
 
       # Applications
       obsidian
+
+      # Gothenburg Bit Factory Setup
+      taskwarrior
+      taskwarrior-tui
+	  timewarrior
     ];
 
     stateVersion = "23.11";
