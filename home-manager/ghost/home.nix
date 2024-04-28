@@ -29,7 +29,7 @@
       # Gothenburg Bit Factory Setup
       taskwarrior
       taskwarrior-tui
-	  timewarrior
+      timewarrior
     ];
 
     stateVersion = "23.11";
