@@ -128,6 +128,9 @@
 
     # VPN
     openvpn
+
+    # Extra
+    python3
   ];
 
   #######
