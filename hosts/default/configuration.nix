@@ -85,6 +85,10 @@
     wget
     tree
 
+    # Nix utils
+    nix-output-monitor
+    nvd
+
     # Bluetooth
     bluez
 
