@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../programs/git.nix
+    ../../programs/git/git.nix
   ];
 
   home = {
@@ -12,6 +12,7 @@
     packages = with pkgs; [
       # File manager
       lf
+      ctpv # File previewer
 
       # Editors
       neovim
@@ -22,6 +23,9 @@
       ripgrep
       neofetch
       starship
+
+      # Multiplexor
+      zellij
 
       # Applications
       obsidian
