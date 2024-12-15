@@ -106,7 +106,7 @@
     wl-clipboard
 
     # Wallpaper manager
-    swww
+    hyprpaper
 
     # Notification deamon
     dunst
