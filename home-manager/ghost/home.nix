@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../../programs/git/git.nix
+    ../../programs/git.nix
   ];
 
   home = {
