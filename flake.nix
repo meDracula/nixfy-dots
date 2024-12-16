@@ -24,9 +24,6 @@
             # Required to install obsidian
             "electron-25.9.0"
           ];
-          allowUnfreePredicate = [
-            "winbox4"
-          ];
         };
       };
     in {
