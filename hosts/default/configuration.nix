@@ -89,6 +89,9 @@
     nix-output-monitor
     nvd
 
+    # Sound
+    qpwgraph
+
     # Bluetooth
     bluez
     blueman
