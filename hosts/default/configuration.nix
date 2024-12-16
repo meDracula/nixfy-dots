@@ -37,7 +37,6 @@
   #######
   # Sound
   #######
-  # sound.enable = true; # Remove/False only meant for ALSA-based configurations
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -84,6 +83,7 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     tree
+    unzip
 
     # Nix utils
     nix-output-monitor
@@ -91,6 +91,7 @@
 
     # Bluetooth
     bluez
+    blueman
 
     # Home Manager
     home-manager
@@ -132,6 +133,9 @@
 
     # VPN
     openvpn
+
+    # RouterOS
+    winbox4
 
     # Extra
     python3

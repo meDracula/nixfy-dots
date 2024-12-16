@@ -24,11 +24,14 @@
             # Required to install obsidian
             "electron-25.9.0"
           ];
+          allowUnfreePredicate = [
+            "winbox4"
+          ];
         };
       };
     in {
       nixosConfigurations.default = lib.nixosSystem {
-	        inherit system;
+	        inherit system pkgs;
           modules = [
             ./hosts/default/configuration.nix
           ];
