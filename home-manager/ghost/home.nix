@@ -19,6 +19,7 @@
 
       # Terminal utils
       fzf
+      fd
       bat
       ripgrep
       neofetch
