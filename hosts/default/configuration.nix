@@ -167,6 +167,7 @@
   fonts.packages = with pkgs; [
     fira-code
     meslo-lgs-nf
+    iosevka
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
