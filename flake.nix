@@ -28,7 +28,7 @@
       };
     in {
       nixosConfigurations.shell = lib.nixosSystem {
-	      inherit system pkgs;
+          inherit system pkgs;
           modules = [
             ./hosts/shell/configuration.nix
           ];
@@ -38,8 +38,8 @@
         ghost = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [ 
-	          ./users/ghost/home-manager
-	        ];
+            ./users/ghost/home-manager/home.nix
+          ];
         };
       };
   };
