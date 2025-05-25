@@ -9,13 +9,6 @@
     username = "ghost";
     homeDirectory = "/home/ghost";
 
-    git = {
-      enable = true;
-      userName = "meDracula";
-      userEmail = "me.dracula@protonmail.com";
-      editor = "nvim";
-    };
-
     packages = with pkgs; [
       # File manager
       lf
@@ -45,5 +38,12 @@
     ];
 
     stateVersion = "25.05";
+  };
+
+  git = {
+    enable = true;
+    userName = "meDracula";
+    userEmail = "me.dracula@protonmail.com";
+    editor = "nvim";
   };
 }
