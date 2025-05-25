@@ -1,7 +1,7 @@
 #########################
 # Home Manager Git Config
 #########################
-{ config, pkgs, programs, ... }:
+{ lib, config, pkgs, programs, ... }:
 
 {
   options = {
