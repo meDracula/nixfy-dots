@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./ghost.nix
+      ../../users/ghost
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -30,11 +30,6 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
   console.keyMap = "sv-latin1";
-
-  #####################
-  # Keyboard Moonlander
-  #####################
-  hardware.keyboard.zsa.enable = true;
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -82,10 +77,8 @@
   ##########
   # Packages
   ##########
-  # List packages installed in system profile. To search, run:
-  # $ nix search <package>
   environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    vim
     wget
     tree
     unzip
@@ -93,10 +86,6 @@
     # Nix utils
     nix-output-monitor
     nvd
-
-    # Keyboard Moonlander
-    wally-cli
-    keymapp
 
     # Sound
     qpwgraph
