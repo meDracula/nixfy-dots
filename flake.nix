@@ -28,9 +28,9 @@
       };
     in {
       nixosConfigurations.default = lib.nixosSystem {
-	        inherit system pkgs;
+	      inherit system pkgs;
           modules = [
-            ./hosts/default/configuration.nix
+            ./hosts/shell/configuration.nix
           ];
       };
 
