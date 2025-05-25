@@ -38,7 +38,7 @@
         ghost = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [ 
-	          ./home-manager/ghost/home.nix
+	          ./users/ghost/home-manager
 	        ];
         };
       };
