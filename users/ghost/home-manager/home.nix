@@ -31,6 +31,11 @@
       # Applications
       obsidian
 
+      # kubernetes
+      talosctl
+      kubectl
+      kubectx
+
       # Gothenburg Bit Factory Setup
       taskwarrior
       taskwarrior-tui
