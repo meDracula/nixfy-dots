@@ -20,9 +20,6 @@
       lf
       ctpv # File previewer
 
-      # Editors
-      neovim
-
       # Terminal utils
       fzf
       fd
