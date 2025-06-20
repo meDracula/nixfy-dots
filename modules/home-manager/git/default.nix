@@ -8,6 +8,7 @@
     git.enable = lib.mkEnableOption "enable git config";
     git.userName = lib.mkOption { type = lib.types.str; };
     git.userEmail = lib.mkOption { type = lib.types.str; };
+    git.signingKey = lib.mkOption { type = lib.types.str; };
     git.editor = lib.mkOption { type = lib.types.str; };
   };
 
@@ -21,6 +22,11 @@
         core = { editor = config.git.editor; };
       	init = { defaultBranch = "main"; };
         pull = { rebase = true; };
+      };
+
+      signing = {
+        key = config.git.signingKey;
+        signByDefault = true;
       };
   
       aliases = {

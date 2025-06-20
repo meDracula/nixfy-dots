@@ -3,7 +3,7 @@
 
   inputs = {
     # Nixpkgs
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # Home Manager
     home-manager = {
@@ -32,6 +32,9 @@
           modules = [
             ./hosts/shell/configuration.nix
           ];
+          specialArgs = {
+            inherit self;
+          };
       };
 
       homeConfigurations = {
@@ -40,6 +43,9 @@
           modules = [ 
             ./users/ghost/home-manager/home.nix
           ];
+          specialArgs = {
+            inherit self;
+          };
         };
       };
   };
