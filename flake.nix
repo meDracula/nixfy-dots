@@ -32,9 +32,6 @@
           modules = [
             ./hosts/shell/configuration.nix
           ];
-          specialArgs = {
-            inherit self;
-          };
       };
 
       homeConfigurations = {
@@ -43,9 +40,6 @@
           modules = [ 
             ./users/ghost/home-manager/home.nix
           ];
-          specialArgs = {
-            inherit self;
-          };
         };
       };
   };

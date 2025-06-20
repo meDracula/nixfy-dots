@@ -1,14 +1,14 @@
-{ inputs, outputs, pkgs, self, ... }:
+{ inputs, outputs, pkgs, ... }:
 
 {
   imports = [
-    self + /modules/home-manager/git
-    self + /modules/home-manager/zellij
-    self + /modules/home-manager/lf
-    self + /modules/home-manager/kubernetes
-    self + /modules/home-manager/terraform
-    self + /modules/home-manager/neovim
-    self + /modules/home-manager/taskwarrior
+    ../../../modules/home-manager/git
+    ../../../modules/home-manager/zellij
+    ../../../modules/home-manager/lf
+    ../../../modules/home-manager/kubernetes
+    ../../../modules/home-manager/terraform
+    ../../../modules/home-manager/neovim
+    ../../../modules/home-manager/taskwarrior
   ];
 
   home = {
