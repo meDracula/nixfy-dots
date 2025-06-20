@@ -32,3 +32,18 @@ $ cd /etc/nixos
 $ nix flake update
 $ sudo nixos-rebuild --flake /etc/nixos#profile --upgrade
 ```
+
+## Nix Clean up
+To clean up from old unsued nix store paths from store the command `nix-collect-garbage` should be used.
+
+To understand how much will be deleted before running use:
+```sh
+$ sudo nix-collect-garbage --delete-old --dry-run
+```
+This will simulate the deletion with the dry run option of the option `--delete-old` specifies the deletion of old store paths that are no longer used by any current generation.
+It targets and removes clutter resulting from software updates and deletions.
+
+To execute the nix clean up, just remove the `--dry-run`:
+```sh
+$ sudo nix-collect-garbage --delete-old
+```
