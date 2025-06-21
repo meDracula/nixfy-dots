@@ -144,6 +144,9 @@
       bindkey -s '^o' '^ulfcd\n'
       bindkey -s '^k' '^ukubectx\n'
 
+      # Required for working with gpg in terminal
+      export GPG_TTY=$(tty)
+
       # Starship
       eval "$(starship init zsh)"
     '';
