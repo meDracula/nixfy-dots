@@ -6,6 +6,7 @@
     ../../../modules/home-manager/zellij
     ../../../modules/home-manager/lf
     ../../../modules/home-manager/kubernetes
+    ../../../modules/home-manager/kubernetes/talos
     ../../../modules/home-manager/terraform
     ../../../modules/home-manager/neovim
     ../../../modules/home-manager/taskwarrior
@@ -34,11 +35,6 @@
 
       # Fonts
       fira-code
-
-      # kubernetes
-      talosctl
-      kubectl
-      kubectx
     ];
 
     stateVersion = "25.05";
