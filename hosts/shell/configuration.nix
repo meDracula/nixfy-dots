@@ -190,7 +190,7 @@
     enable = true;
     enableSSHSupport = true;
   };
-  programs.ssh.startAgent = true;
+  # programs.ssh.startAgent = true;
 
   #########
   # Yubikey
