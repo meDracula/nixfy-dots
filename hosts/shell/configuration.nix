@@ -145,6 +145,7 @@
 
     # Yubikey
     yubikey-manager
+    yubikey-personalization
 
     # VPN
     openvpn
@@ -185,11 +186,17 @@
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
   programs.ssh.startAgent = true;
+
+  #########
+  # Yubikey
+  #########
+  # To use the smart card mode (CCID) of Yubikey
+  services.pcscd.enable = true;
 
   # List services that you want to enable:
 
