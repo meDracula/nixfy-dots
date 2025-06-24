@@ -143,6 +143,9 @@
     pinentry
     pinentry-curses
 
+    # Yubikey
+    yubikey-manager
+
     # VPN
     openvpn
 
