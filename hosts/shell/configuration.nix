@@ -149,6 +149,7 @@
 
     # VPN
     openvpn
+    wireguard-tools
 
     # RouterOS
     winbox4
