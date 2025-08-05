@@ -11,8 +11,8 @@ let
       owner = "daltonmenezes";
       repo = "aura-theme";
       rev = "main";
-	  # Command: nix-prefetch-url --unpack https://github.com/daltonmenezes/aura-theme/archive/refs/heads/main.zip
-      sha256 = "0lnjnssw1bdfg0gra71954rwx282svz5ca2bb8kgnnzi6z2a143v"; # Commit: 6e4f659e74577cae7cb152a96f84c23bc9213f1b
+      # Command: nix-prefetch-url --unpack https://github.com/daltonmenezes/aura-theme/archive/refs/heads/main.zip
+      sha256 = "1vxk4mkk72qnp2w60gigl3ran6lhyd4i6j494z3zkina330nvkgq"; # Commit: 6356de2fa2551b9dbc3a7d7b6c5328658353084e
     };
     pluginType = "lua";
   };
