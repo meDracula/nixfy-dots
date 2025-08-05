@@ -59,6 +59,7 @@ in {
     golangci-lint # Linter
     goreleaser    # Deliver Go binaries
     gosec         # Golang security checker
+    delve         # Golang Debugger
     # Terraform
     terraform-ls
     # Nix
