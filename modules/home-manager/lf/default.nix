@@ -18,4 +18,9 @@
 	  autoquit = true;
 	};
   };
+
+  home.packages = with pkgs; [
+    lf
+    ctpv # File previewer
+  ];
 }
