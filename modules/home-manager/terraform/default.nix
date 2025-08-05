@@ -14,6 +14,6 @@
 
   home.file.".tfswitch.toml".text = ''
     bin = "${config.home.homeDirectory}/.local/bin/terraform"
-    version = "1.7.5"
+    version = "1.12.2"
   '';
 }
