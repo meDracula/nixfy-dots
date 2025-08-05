@@ -41,6 +41,12 @@
             ./users/ghost/home-manager/home.nix
           ];
         };
+        victor = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          modules = [ 
+            ./users/victor/home-manager/home.nix
+          ];
+        };
       };
   };
 }
