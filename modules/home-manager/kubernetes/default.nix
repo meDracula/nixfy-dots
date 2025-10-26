@@ -11,6 +11,7 @@ in {
     kubectx
     k9s
     kubernetes-helm
+    argocd
   ];
 
   home.file.".kube/config.src" = {
