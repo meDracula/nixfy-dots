@@ -10,6 +10,7 @@ in {
     kubectl
     kubectx
     k9s
+    kubeshark
     kubernetes-helm
     argocd
   ];
