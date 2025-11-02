@@ -138,7 +138,7 @@
       }
 
       cdp() {
-        cd ${config.homeDirectory}/Projects
+        cd ${config.home.homeDirectory}/Projects
         cdf
       }
 
