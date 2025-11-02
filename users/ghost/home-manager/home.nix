@@ -19,12 +19,12 @@
     packages = with pkgs; [
       # File manager
       lf
-      ctpv # File previewer
 
       # Terminal utils
       fzf
       fd
       jq
+      yq
       bat
       ripgrep
       neofetch
@@ -135,6 +135,11 @@
           local dir
           dir=$(fd --type directory --hidden -E .git/ | FZF_DEFAULT_OPTS="--keep-right --layout=default --border=rounded --height=~20 --scheme=path" fzf)
           [[ -n "$dir" ]] && cd "$dir"
+      }
+
+      cdp() {
+        cd ${config.homeDirectory}/Projects
+        cdf
       }
 
       bindkey -s '^o' '^ulfcd\n'
