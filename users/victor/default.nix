@@ -1,7 +1,12 @@
 #############################
 # User: victor (frankenstein)
 #############################
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   options = {
