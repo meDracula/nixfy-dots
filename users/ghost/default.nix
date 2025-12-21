@@ -1,7 +1,12 @@
 #############
 # User: Ghost
 #############
-{ lib, config, pkgs, ... }:
+{
+  lib,
+  config,
+  pkgs,
+  ...
+}:
 
 {
   options = {
