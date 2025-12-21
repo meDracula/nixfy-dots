@@ -137,9 +137,6 @@
     # Version control
     git
 
-    # app launchers
-    rofi-wayland
-
     # Password Store
     pass
     gnupg
