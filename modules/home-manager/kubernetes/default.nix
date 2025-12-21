@@ -5,7 +5,8 @@
 
 let
   kubeConfigFile = ./kubeconfig.yaml;
-in {
+in
+{
   home.packages = with pkgs; [
     kubectl
     kubectx
