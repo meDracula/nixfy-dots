@@ -1,4 +1,9 @@
-{ config, pkgs, programs, ... }:
+{
+  config,
+  pkgs,
+  programs,
+  ...
+}:
 
 {
   imports = [
@@ -10,6 +15,7 @@
     ../../../modules/home-manager/terraform
     ../../../modules/home-manager/neovim
     ../../../modules/home-manager/taskwarrior
+    ../../../modules/home-manager/rofi
   ];
 
   home = {
