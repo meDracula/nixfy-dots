@@ -1,7 +1,12 @@
 ###############
 # Zellij Config
 ###############
-{ config, pkgs, programs, ... }:
+{
+  config,
+  pkgs,
+  programs,
+  ...
+}:
 
 {
   xdg.configFile."zellij/config.kdl".source = ./config.kdl;
