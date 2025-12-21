@@ -14,7 +14,13 @@
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, pre-commit-hooks }@inputs:
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      pre-commit-hooks,
+    }@inputs:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -52,24 +58,25 @@
           shellcheck.enable = true;
         };
       };
-    in {
+    in
+    {
       nixosConfigurations.shell = lib.nixosSystem {
-          inherit system pkgs;
-          modules = [
-            ./hosts/shell/configuration.nix
-          ];
+        inherit system pkgs;
+        modules = [
+          ./hosts/shell/configuration.nix
+        ];
       };
 
       homeConfigurations = {
         ghost = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ 
+          modules = [
             ./users/ghost/home-manager/home.nix
           ];
         };
         victor = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
-          modules = [ 
+          modules = [
             ./users/victor/home-manager/home.nix
           ];
         };
@@ -94,5 +101,5 @@
           '';
         };
       };
-  };
+    };
 }
