@@ -1,1 +1,2 @@
 modules/home-manager/kubernetes/kubeconfig.yaml
+/.pre-commit-config.yaml
