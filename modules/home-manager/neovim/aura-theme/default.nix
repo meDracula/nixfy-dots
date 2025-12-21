@@ -18,8 +18,8 @@ let
   };
   # Make plugin derivation
   aura-theme = pkgs.stdenv.mkDerivation {
-    name   = "aura-theme";
-    src    = aura-theme-repo;
+    name = "aura-theme";
+    src = aura-theme-repo;
     phases = [ "installPhase" ];
     installPhase = ''
       mkdir -p $out

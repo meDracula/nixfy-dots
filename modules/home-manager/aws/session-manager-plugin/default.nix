@@ -1,4 +1,9 @@
-{ stdenv, fetchurl, unzip, lib }:
+{
+  stdenv,
+  fetchurl,
+  unzip,
+  lib,
+}:
 
 stdenv.mkDerivation rec {
   pname = "session-manager-plugin";
@@ -6,14 +11,14 @@ stdenv.mkDerivation rec {
   # curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
   src = fetchurl {
     url = "https://s3.amazonaws.com/session-manager-downloads/plugin/${version}/ubuntu_64bit/session-manager-plugin.deb";
-	sha256 = "91cc9a1a8df6f730622d5e11a8610be6e06d5858408e8029b56d0d63aedd0a68";
+    sha256 = "91cc9a1a8df6f730622d5e11a8610be6e06d5858408e8029b56d0d63aedd0a68";
   };
 
   nativeBuildInputs = [ unzip ];
 
   unpackPhase = ''
-    ar x $src
-	tar xf data.tar.gz
+        ar x $src
+    	tar xf data.tar.gz
   '';
 
   installPhase = ''

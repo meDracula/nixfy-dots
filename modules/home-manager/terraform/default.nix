@@ -1,7 +1,12 @@
 ########################
 # Home Manager Terraform
 ########################
-{ config, pkgs, programs, ... }:
+{
+  config,
+  pkgs,
+  programs,
+  ...
+}:
 
 {
   home.packages = with pkgs; [

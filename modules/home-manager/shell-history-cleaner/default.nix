@@ -11,7 +11,8 @@ let
     > ~/.bash_history
     echo "INFO: Shell histroy cleared on $(date) " >> ~/.cleanup_history.log
   '';
-in {
+in
+{
   # Save the script to ~/.local/bin
   home.file.".local/bin/sh-cleanup-histories.sh" = {
     executable = true;
