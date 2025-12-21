@@ -140,7 +140,6 @@
     # Password Store
     pass
     gnupg
-    pinentry
     pinentry-curses
 
     # Yubikey
