@@ -1,7 +1,7 @@
 {
   config,
+  lib,
   pkgs,
-  programs,
   ...
 }:
 
@@ -104,7 +104,7 @@
       gtr = "cd $(git rev-parse --show-toplevel)";
     };
 
-    initExtraFirst = ''
+    initContent = ''
       # Set Options
       setopt autocd              # change directory just by typing its name
       #setopt correct            # auto correct mistakes
@@ -114,9 +114,7 @@
       setopt notify              # report the status of background jobs immediately
       setopt numericglobsort     # sort filenames numerically when it makes sense
       setopt promptsubst         # enable command substitution in prompt
-    '';
 
-    initExtra = ''
       # Configure key keybindings
       bindkey -e                                        # emacs key bindings
       bindkey ' ' magic-space                           # do history expansion on space
