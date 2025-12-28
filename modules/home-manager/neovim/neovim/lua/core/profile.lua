@@ -9,7 +9,7 @@ vim.opt.relativenumber = true
 vim.opt.mouse = ""
 
 -- tabing
-vim.opt.expandtab = true -- Plejdify use space over tabs :(
+vim.opt.expandtab = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
@@ -18,3 +18,8 @@ vim.keymap.set("n", "<leader>s", ":update<CR>")
 
 -- Set Spell check on or off
 vim.keymap.set("n", "<leader>l", ":setlocal spell! spelllang=en_us<CR>")
+
+-- Sourcing file options
+vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<space>x", ":.lua<CR>")
+vim.keymap.set("v", "<space>x", ":lua<CR>")
