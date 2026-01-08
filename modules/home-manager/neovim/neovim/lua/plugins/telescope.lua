@@ -1,5 +1,8 @@
 -- Telescope
 require('telescope').setup {
+  defaults = {
+    theme = "ivy"
+  },
   extensions = {
     fzf = {
       fuzzy = true,                   -- false will only do exact matching
@@ -10,21 +13,6 @@ require('telescope').setup {
       ignore = ".git",
     }
   },
-  pickers = {
-    -- TODO { key = { theme = ivy } for key in [ find_files, command_history, buffers, lsp_references]}
-    find_files = {
-      theme = "ivy",
-    },
-    command_history = {
-      theme = "ivy",
-    },
-    buffers = {
-      theme = "ivy",
-    },
-    lsp_references = {
-      theme = "ivy",
-    }
-  }
 }
 
 require('telescope').load_extension('fzf');
