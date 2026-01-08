@@ -32,12 +32,12 @@ in
         telescope-fzf-native-nvim # fzf-native is a c port of fzf
         telescope-nvim # fuzzy‑finder UI
         nvim-treesitter # configurations and abstraction layer for neovim
+        nvim-treesitter-context # Lightweights plugin that shows the context of the currently visible buffer contents
         nvim-lspconfig # LSP client configurations
         lualine-nvim # statusline written in Lua
         nvim-cmp # completion engine plugin
         cmp-nvim-lsp # nvim-cmp source neovim built-in language server client
         vim-terraform # syntax highlighting, indentation and more for HCL and Terraform-related
-
       ]
       ++ [ aura-theme ];
 

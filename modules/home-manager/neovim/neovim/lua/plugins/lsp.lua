@@ -1,10 +1,10 @@
-local lspconfig = require('lspconfig')
+local lsp = vim.lsp.config
 
 -- LSP: Python
-lspconfig.pyright.setup{}
+lsp.pyright.setup{}
 
 -- LSP: Lua
-lspconfig.lua_ls.setup {
+lsp.lua_ls.setup {
   settings = {
     Lua = {
       runtime = {
@@ -26,10 +26,10 @@ lspconfig.lua_ls.setup {
 }
 
 -- LSP: Go
-lspconfig.gopls.setup {
+lsp.gopls.setup {
   cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
-  root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
+  root_dir = lsp.util.root_pattern("go.work", "go.mod", ".git"),
   settings = {
     gopls = {
       analyses = {
@@ -42,7 +42,7 @@ lspconfig.gopls.setup {
 }
 
 -- LSP: Nix
-lspconfig.nil_ls.setup {
+lsp.nil_ls.setup {
   settings = {
     ["nil"] = {
       formatting = {
@@ -53,9 +53,9 @@ lspconfig.nil_ls.setup {
 }
 
 -- LSP: terraform
-require("lspconfig").terraformls.setup {
+lsp.terraformls.setup {
   filetypes = { "terraform", "tf" },
 }
 
 -- LSP: typescript
-require'lspconfig'.ts_ls.setup {}
+lsp.ts_ls.setup {}

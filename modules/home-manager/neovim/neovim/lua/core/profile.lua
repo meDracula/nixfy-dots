@@ -13,6 +13,9 @@ vim.opt.expandtab = false
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 
+-- Copy from clipboard
+-- vim.opt.clipboard = "unnamedplus" -- Consideration;
+
 -- save
 vim.keymap.set("n", "<leader>s", ":update<CR>")
 
@@ -23,3 +26,4 @@ vim.keymap.set("n", "<leader>l", ":setlocal spell! spelllang=en_us<CR>")
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
+vim.keymap.set("n", "<space>i", ":InspectTree<CR>")
