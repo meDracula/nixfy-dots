@@ -1,6 +1,6 @@
 -- Default root markers for all clients
 vim.lsp.config('*', {
-	root_markers = { '.git' },
+  root_markers = { '.git' },
 })
 
 -- LSP: Python
@@ -11,7 +11,7 @@ vim.lsp.config('lua_ls', {
   settings = {
     Lua = {
       runtime = {
-        version = "LuaJIT",  -- Neovim uses LuaJIT
+        version = "LuaJIT", -- Neovim uses LuaJIT
         path = vim.split(package.path, ";"),
       },
       diagnostics = {
@@ -68,18 +68,19 @@ vim.lsp.enable('ts_ls')
 
 -- Formatting
 vim.api.nvim_create_autocmd('LspAttach', {
-	callback = function(args)
-		local client = vim.lsp.get_client_by_id(args.data.client_id)
-		if not client then
-			return
-		end
-		if client.supports_method('textDocument/formatting') then
-			vim.api.nvim_create_autocmd('BufWritePre', {
-				buffer = args.buf,
-				callback = function()
-					vim.lsp.format({ bufnr = args.buf, id = client.id })
-				end,
-			})
-		end
-	end,
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    if not client then
+      return
+    end
+    if client.supports_method('textDocument/formatting') then
+      -- Format the current buffer on write
+      vim.api.nvim_create_autocmd('BufWritePre', {
+        buffer = args.buf,
+        callback = function()
+          vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+        end,
+      })
+    end
+  end,
 })
