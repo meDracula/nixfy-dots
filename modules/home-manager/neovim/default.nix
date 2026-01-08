@@ -28,10 +28,14 @@ in
     plugins =
       with pkgs.vimPlugins;
       [
+        # Telescope
         plenary-nvim # Lua utility library (required by Telescope)
         telescope-fzf-native-nvim # fzf-native is a c port of fzf
         telescope-nvim # fuzzy‑finder UI
+        # Status line
         lualine-nvim # statusline written in Lua
+        # File explorer and filesystem
+        oil-nvim
         # LSP Section
         nvim-lspconfig # LSP client configurations
         nvim-cmp # completion engine plugin
