@@ -31,9 +31,9 @@ in
         plenary-nvim # Lua utility library (required by Telescope)
         telescope-fzf-native-nvim # fzf-native is a c port of fzf
         telescope-nvim # fuzzy‑finder UI
+        lualine-nvim # statusline written in Lua
         # LSP Section
         nvim-lspconfig # LSP client configurations
-        lualine-nvim # statusline written in Lua
         nvim-cmp # completion engine plugin
         cmp-nvim-lsp # nvim-cmp source neovim built-in language server client
         vim-terraform # syntax highlighting, indentation and more for HCL and Terraform-related

@@ -1,3 +1,8 @@
+-- Default root markers for all clients
+vim.lsp.config('*', {
+	root_markers = { '.git' },
+})
+
 -- LSP: Python
 vim.lsp.enable('pyright')
 
@@ -22,6 +27,7 @@ vim.lsp.config('lua_ls', {
     },
   },
 })
+vim.lsp.enable("lua_ls")
 
 -- LSP: Go
 vim.lsp.config('gopls', {
@@ -37,6 +43,7 @@ vim.lsp.config('gopls', {
     },
   },
 })
+vim.lsp.enable("gopls")
 
 -- LSP: Nix
 vim.lsp.config('nil_ls', {
@@ -48,11 +55,13 @@ vim.lsp.config('nil_ls', {
     },
   },
 })
+vim.lsp.enable("nil_ls")
 
 -- LSP: terraform
 vim.lsp.config('terraformls', {
   filetypes = { "terraform", "tf" },
 })
+vim.lsp.enable('terraformls')
 
 -- LSP: typescript
 vim.lsp.enable('ts_ls')
