@@ -22,6 +22,10 @@ vim.keymap.set("n", "<leader>s", ":update<CR>")
 -- Set Spell check on or off
 vim.keymap.set("n", "<leader>l", ":setlocal spell! spelllang=en_us<CR>")
 
+-- Quickfix
+vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>") -- Alt+j
+vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>") -- Alt+k
+
 -- Sourcing file options
 vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
@@ -39,4 +43,10 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
--- vim.cmd [[hi @function.builtin guifg=yellow]]
+-- Terminal
+vim.keymap.set("n", "<space>t", function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 7)
+end)
