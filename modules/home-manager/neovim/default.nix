@@ -28,8 +28,6 @@ in
     plugins =
       with pkgs.vimPlugins;
       [
-        # File explorer and filesystem
-        oil-nvim
         # Telescope
         plenary-nvim # Lua utility library (required by Telescope)
         telescope-fzf-native-nvim # fzf-native is a c port of fzf
