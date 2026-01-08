@@ -1,7 +1,8 @@
 -- Telescope
 require('telescope').setup {
   defaults = {
-    theme = "ivy"
+    theme = "ivy",
+    disable_devicons = true,
   },
   extensions = {
     fzf = {
