@@ -14,6 +14,28 @@ require('telescope').setup {
       ignore = ".git",
     }
   },
+  pickers = {
+    find_files = {
+      theme = "ivy",
+      disable_devicons = true,
+    },
+    buffers = {
+      theme = "ivy",
+      disable_devicons = true,
+    },
+    live_grep = {
+      theme = "ivy",
+      disable_devicons = true,
+    },
+    command_history = {
+      theme = "ivy",
+      disable_devicons = true,
+    },
+    lsp_references = {
+      theme = "ivy",
+      disable_devicons = true,
+    }
+  }
 }
 
 require('telescope').load_extension('fzf');
