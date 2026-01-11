@@ -20,7 +20,15 @@ vim.opt.shiftwidth = 4
 vim.keymap.set("n", "<leader>s", ":update<CR>")
 
 -- Terminal
+require("terminal")
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+vim.keymap.set("n", "<space>t", function()
+  vim.cmd.vnew()
+  vim.cmd.term()
+  vim.cmd.wincmd("J")
+  vim.api.nvim_win_set_height(0, 7)
+end)
+vim.keymap.set("n", "<space>tf", ":FloatTerminal<CR>")
 
 -- Set Spell check on or off
 vim.keymap.set("n", "<leader>l", ":setlocal spell! spelllang=en_us<CR>")
@@ -48,11 +56,3 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
-
--- Terminal
-vim.keymap.set("n", "<space>t", function()
-  vim.cmd.vnew()
-  vim.cmd.term()
-  vim.cmd.wincmd("J")
-  vim.api.nvim_win_set_height(0, 7)
-end)
