@@ -3,11 +3,14 @@ vim.lsp.config('*', {
   root_markers = { '.git' },
 })
 
+local capabilities = require('blink.cmp').get_lsp_capabilities()
+
 -- LSP: Python
 vim.lsp.enable('pyright')
 
 -- LSP: Lua
 vim.lsp.config('lua_ls', {
+  capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {

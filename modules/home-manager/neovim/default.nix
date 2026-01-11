@@ -41,6 +41,8 @@ in
         nvim-cmp # completion engine plugin
         cmp-nvim-lsp # nvim-cmp source neovim built-in language server client
         vim-terraform # syntax highlighting, indentation and more for HCL and Terraform-related
+        # Completions
+        blink-cmp
         # Treesiter
         nvim-treesitter # configurations and abstraction layer for neovim
         nvim-treesitter-context # Lightweights plugin that shows the context of the currently visible buffer contents

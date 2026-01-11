@@ -19,6 +19,9 @@ vim.opt.shiftwidth = 4
 -- save
 vim.keymap.set("n", "<leader>s", ":update<CR>")
 
+-- Terminal
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
 -- Set Spell check on or off
 vim.keymap.set("n", "<leader>l", ":setlocal spell! spelllang=en_us<CR>")
 
@@ -33,6 +36,9 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 -- TreeSitter Inspect Tree
 vim.keymap.set("n", "<space>i", ":InspectTree<CR>")
+
+-- Oil
+vim.keymap.set("n", "<space>o", ":Oil --float<CR>")
 
 -- Yank on Highlight
 vim.api.nvim_create_autocmd("TextYankPost", {
