@@ -60,4 +60,4 @@ vim.keymap.set('n', '<leader>fr', builtin.lsp_references, { desc = 'Telescope ls
 vim.keymap.set('n', '<leader>fs', function()
   builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end);
--- vim.keymap.set('n', '<leader>fh', builtin.commands, {});
+vim.keymap.set('n', '<leader>ft', builtin.diagnostics, { desc = 'Telescope diagnostics' });
