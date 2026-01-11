@@ -1,8 +1,19 @@
+-- Trouble
+-- local actions = require("telescope.actions")
+local open_with_trouble = require("trouble.sources.telescope").open
+
+-- Use this to add more results without clearing the trouble list
+-- local add_to_trouble = require("trouble.sources.telescope").add
+
 -- Telescope
 require('telescope').setup {
   defaults = {
     theme = "ivy",
     disable_devicons = true,
+    mappings = {
+      i = { ["<space>fg"] = open_with_trouble },
+      n = { ["<space>fg"] = open_with_trouble },
+    },
   },
   extensions = {
     fzf = {

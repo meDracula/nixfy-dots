@@ -43,6 +43,8 @@ in
         vim-terraform # syntax highlighting, indentation and more for HCL and Terraform-related
         # Completions
         blink-cmp
+        # Diagnostrics
+        trouble-nvim
         # Treesiter
         nvim-treesitter # configurations and abstraction layer for neovim
         nvim-treesitter-context # Lightweights plugin that shows the context of the currently visible buffer contents

@@ -37,6 +37,9 @@ vim.keymap.set("n", "<space>i", ":InspectTree<CR>")
 -- Oil
 vim.keymap.set("n", "<space>o", ":Oil --float<CR>")
 
+-- Trouble
+vim.keymap.set("n", "<space>g", ":Trouble diagnostics<CR>")
+
 -- Yank on Highlight
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highligt when yanking (copying) text",

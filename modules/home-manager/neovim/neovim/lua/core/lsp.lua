@@ -1,16 +1,16 @@
 -- Default root markers for all clients
+local capabilities = require('blink.cmp').get_lsp_capabilities()
+
 vim.lsp.config('*', {
   root_markers = { '.git' },
+  capabilities = capabilities,
 })
-
-local capabilities = require('blink.cmp').get_lsp_capabilities()
 
 -- LSP: Python
 vim.lsp.enable('pyright')
 
 -- LSP: Lua
 vim.lsp.config('lua_ls', {
-  capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -36,6 +36,7 @@ vim.lsp.enable("lua_ls")
 vim.lsp.config('gopls', {
   cmd = { "gopls" },
   filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  capabilities = capabilities,
   settings = {
     gopls = {
       analyses = {
