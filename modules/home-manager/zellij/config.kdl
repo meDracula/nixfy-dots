@@ -1,3 +1,4 @@
+show_startup_tips false
 keybinds {
     unbind "Ctrl q" // unbind Ctrl + q for quit moving it to session
     session {
