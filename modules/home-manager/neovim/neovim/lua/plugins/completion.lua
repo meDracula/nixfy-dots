@@ -1,11 +1,3 @@
-require('cmp').setup {
-  sources = {
-    {
-      name = 'nvim_lsp'
-    }
-  }
-}
-
 require('blink.cmp').setup {
   keymap = { preset = 'default' },
 
