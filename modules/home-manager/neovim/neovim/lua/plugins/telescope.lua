@@ -11,8 +11,8 @@ require('telescope').setup {
     theme = "ivy",
     disable_devicons = true,
     mappings = {
-      i = { ["<space>fg"] = open_with_trouble },
-      n = { ["<space>fg"] = open_with_trouble },
+      i = { ["<space>ft"] = open_with_trouble },
+      n = { ["<space>ft"] = open_with_trouble },
     },
   },
   extensions = {
