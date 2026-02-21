@@ -42,6 +42,7 @@
 
       # Dev tools
       uv
+      pre-commit
 
       # Fonts
       fira-code
