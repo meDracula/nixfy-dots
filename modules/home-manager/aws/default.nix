@@ -17,6 +17,5 @@ in
     sessionManagerPlugin
   ];
 
-  # home.file.".aws/config".text = ''
-  # '';
+  home.file.".aws/config".text = '''';
 }

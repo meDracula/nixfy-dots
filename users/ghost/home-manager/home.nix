@@ -16,6 +16,7 @@
     ../../../modules/home-manager/neovim
     ../../../modules/home-manager/taskwarrior
     ../../../modules/home-manager/rofi
+    ../../../modules/home-manager/aws
   ];
 
   home = {
@@ -144,6 +145,11 @@
       cdp() {
         cd ${config.home.homeDirectory}/Projects
         cdf
+      }
+
+      aws-flatfiles-login() {
+        export AWS_ACCESS_KEY_ID="$(pass aws/massive/aws_access_key_id)"
+        export AWS_SECRET_ACCESS_KEY="$(pass aws/massive/aws_secret_access_key)"
       }
 
       bindkey -s '^o' '^ulfcd\n'
