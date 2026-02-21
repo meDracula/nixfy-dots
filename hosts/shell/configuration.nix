@@ -85,6 +85,17 @@
   ##########
   # Packages
   ##########
+  # Virtualization setup
+  virtualisation = {
+    containers.enable = true;
+    podman = {
+      enabled = true;
+      dockerCompat = true; # Create a `docker` alias for podman, to use it as a drop-in replacement
+      # Required for containers under podman-compose to be able to talk to each other
+      defaultNetwork.settings.dns_enabled = true;
+    };
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search <package>
   environment.systemPackages = with pkgs; [
@@ -155,6 +166,11 @@
 
     # Extra
     python3
+
+    # Vitalization
+    dive # look into docker image layers
+    podman-tui # status of containers in the terminal
+    podman-compose # start group of containers for dev
   ];
 
   #######
