@@ -40,6 +40,9 @@
       # Applications
       obsidian
 
+      # Dev tools
+      uv
+
       # Fonts
       fira-code
     ];
