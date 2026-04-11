@@ -47,3 +47,31 @@ To execute the nix clean up, just remove the `--dry-run`:
 ```sh
 $ sudo nix-collect-garbage --delete-old
 ```
+
+## Yubikey SSH Auth and Signing key
+For Authentication insert Yubikey with FIDO support. Generate the SSH key by:
+```sh
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:github-auth -C "$(git config user.email)" -f /home/<username>/.ssh/github_yk_git_auth
+```
+Modify the ssh config file and add in:
+```config
+Host github.com
+	PreferredAuthentications publickey
+	IdentityFile /home/<username>/.ssh/github_yk_git_auth
+	IdentityAgent none
+	IdentitiesOnly yes
+```
+Next up add the public key `github_yk_git_auth`.
+
+For signing generate the key with:
+```sh
+ssh-keygen -t ed25519-sk -O resident -O verify-required -O application=ssh:github-signing -C "$(git config user.email)" -f /home/<username>/.ssh/github_yk_git_signing
+```
+Then create a file in the `~/.ssh/allowed_signers` with the content of:
+```txt
+<git config user.email> namespaces="git" <cat /home/<username>/.ssh/github_yk_git_signing.pub>
+```
+
+After that update the git config in nix home-manager of the user in here for the options of signingPubFile and allowedSignersFile, in case they do not match.
+
+Good article by Yubikey themselves [Securing git with SSH and FIDO2](https://developers.yubico.com/SSH/Securing_git_with_SSH_and_FIDO2.html).
