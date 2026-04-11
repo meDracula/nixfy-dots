@@ -96,6 +96,10 @@
     };
   };
 
+  # uv - Python package and project manager
+  # https://wiki.nixos.org/wiki/Python_quickstart_using_uv
+  programs.nix-ld.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search <package>
   environment.systemPackages = with pkgs; [
@@ -103,6 +107,7 @@
     wget
     tree
     unzip
+    uv # uv tool
 
     # Nix utils
     nix-output-monitor

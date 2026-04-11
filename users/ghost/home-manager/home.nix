@@ -36,12 +36,12 @@
       ripgrep
       neofetch
       starship
+      gowall
 
       # Applications
       obsidian
 
       # Dev tools
-      uv
       pre-commit
 
       # Fonts
