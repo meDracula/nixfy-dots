@@ -135,6 +135,9 @@
     # Wallpaper manager
     hyprpaper
 
+    # Status bar
+    waybar
+
     # Notification deamon
     dunst
     libnotify
