@@ -55,7 +55,8 @@
     enable = true;
     userName = "meDracula";
     userEmail = "me.dracula@protonmail.com";
-    signingKey = "879713EE65B0D884";
+    signingPubFile = "${config.home.homeDirectory}/.ssh/github_yk_git_signing.pub";
+    allowedSignersFile = "${config.home.homeDirectory}/.ssh/allowed_signers";
     editor = "nvim";
   };
 

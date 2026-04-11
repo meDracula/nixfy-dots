@@ -4,6 +4,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 
@@ -12,11 +13,17 @@
     git.enable = lib.mkEnableOption "enable git config";
     git.userName = lib.mkOption { type = lib.types.str; };
     git.userEmail = lib.mkOption { type = lib.types.str; };
-    git.signingKey = lib.mkOption { type = lib.types.str; };
+    git.signingPubFile = lib.mkOption { type = lib.types.str; };
     git.editor = lib.mkOption { type = lib.types.str; };
+    git.allowedSignersFile = lib.mkOption { type = lib.types.str; };
   };
 
   config = lib.mkIf config.git.enable {
+
+    home.packages = with pkgs; [
+      mob # Tool for smoth git handover
+    ];
+
     programs.git = {
       enable = config.git.enable;
 
@@ -29,6 +36,8 @@
         core.editor = config.git.editor;
         init.defaultBranch = "main";
         pull.rebase = true;
+
+        gpg.ssh.allowedSignersFile = config.git.allowedSignersFile;
 
         alias = {
           # branch
@@ -100,7 +109,8 @@
       };
 
       signing = {
-        key = config.git.signingKey;
+        format = "ssh";
+        key = config.git.signingPubFile;
         signByDefault = true;
       };
     };
