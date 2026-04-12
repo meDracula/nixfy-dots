@@ -174,6 +174,7 @@
 
     # Extra
     python3
+    btop
 
     # Vitalization
     dive # look into docker image layers
