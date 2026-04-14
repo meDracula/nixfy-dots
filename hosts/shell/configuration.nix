@@ -137,6 +137,9 @@
     wlroots
     wl-clipboard
 
+    # cursor
+    adwaita-icon-theme
+
     # Wallpaper manager
     hyprpaper
 
@@ -196,6 +199,9 @@
     NIXOS_OZONE_WL = "1";
     # Setting session variables
     EDITOR = "vim";
+    # Cursor theme set
+    XCURSOR_THEME = "Adwaita";
+    XCURSOR_SIZE = "24";
   };
 
   #######
