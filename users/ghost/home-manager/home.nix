@@ -43,6 +43,9 @@
       # Dev tools
       pre-commit
 
+      # Programmings languages
+      lua
+
       # Fonts
       fira-code
     ];
