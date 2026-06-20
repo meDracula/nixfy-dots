@@ -73,7 +73,7 @@ in
       ++ [ aura-theme ];
 
     # Inject Lua base setup into init.lua
-    extraLuaConfig = ''
+    initLua = ''
             -- Make Lua aware of your config's lua/ dir
             package.path = package.path .. ";${neovimConfig}/lua/?.lua;${neovimConfig}/lua/?/init.lua"
 

@@ -34,7 +34,6 @@
       yq
       bat
       ripgrep
-      neofetch
       starship
       gowall
 
